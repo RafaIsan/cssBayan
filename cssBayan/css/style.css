@@ -87,7 +87,7 @@ input:checked~.bayan__subtitle:after {
   }
 }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
   body {
     font-size: 1.2em;
   }
