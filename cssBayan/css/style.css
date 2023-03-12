@@ -8,7 +8,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  font-size: 20px;
+  font-size: 10px;
   background: linear-gradient(90deg, #095a53 6%, #063e3e 90%);
   color: #adc5a7;
 }
@@ -54,7 +54,7 @@ h1 {
 }
 
 img {
-  width: 35%;
+  width: 40%;
   max-height: 0;
   align-self: center;
   transform: scale(0);
@@ -62,22 +62,11 @@ img {
   transition: all 0.3s ease-in;
 }
 
-.bayan:hover .bayan__subtitle {
-  border-color: #689bd2;
-  color: #689bd2;
-}
-
-.bayan:hover .bayan__subtitle:after {
-  opacity: 1;
-  border-color: #689bd2 transparent transparent transparent;
-}
-
 input:checked~.bayan__subtitle {
   border-color: #689bd2;
   color: #689bd2;
 }
 
-.bayan__item:hover img,
 input:checked~img {
   height: auto;
   max-height: 100vh;
@@ -86,8 +75,55 @@ input:checked~img {
   margin-bottom: 20px;
 }
 
-.bayan__item:hover .bayan__subtitle:after,
 input:checked~.bayan__subtitle:after {
   transform: rotate(180deg);
   border-color: #689bd2 transparent transparent transparent;
 }
+
+@media (min-width: 576px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 576px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    font-size: 24px;
+  }
+
+  img {
+    width: 20%;
+  }
+
+  .bayan:hover .bayan__subtitle {
+    border-color: #689bd2;
+    color: #689bd2;
+  }
+
+  .bayan:hover .bayan__subtitle:after {
+    opacity: 1;
+    border-color: #689bd2 transparent transparent transparent;
+  }
+
+  .bayan__item:hover img,
+  input:checked~img {
+    height: auto;
+    max-height: 100vh;
+    transform: scale(1);
+    opacity: 1;
+    margin-bottom: 20px;
+  }
+
+  .bayan__item:hover .bayan__subtitle:after,
+  input:checked~.bayan__subtitle:after {
+    transform: rotate(180deg);
+    border-color: #689bd2 transparent transparent transparent;
+  }
+}
+
