@@ -33,22 +33,15 @@ h1 {
 }
 
 .bayan__subtitle {
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   border-top: solid 1px #adc5a7;
   padding: 20px 0;
 }
 
-.bayan__subtitle:after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 10px 10px 0 10px;
-  border-color: #adc5a7 transparent transparent transparent;
+svg {
+  margin-right: 20px;
   opacity: 0;
   transition: all 0.3s ease-in;
 }
@@ -65,6 +58,14 @@ img {
 input:checked~.bayan__subtitle {
   border-color: #689bd2;
   color: #689bd2;
+}
+
+input:checked~.bayan__subtitle svg {
+  opacity: 1;
+}
+
+input:checked~.bayan__subtitle svg path {
+  fill: #689bd2;
 }
 
 input:checked~img {
@@ -106,9 +107,12 @@ input:checked~.bayan__subtitle:after {
     color: #689bd2;
   }
 
-  .bayan:hover .bayan__subtitle:after {
+  .bayan:hover .bayan__subtitle svg {
     opacity: 1;
-    border-color: #689bd2 transparent transparent transparent;
+  }
+  
+  .bayan:hover .bayan__subtitle svg path {
+    fill: #689bd2;
   }
 
   .bayan__item:hover img,
@@ -120,10 +124,9 @@ input:checked~.bayan__subtitle:after {
     margin-bottom: 20px;
   }
 
-  .bayan__item:hover .bayan__subtitle:after,
-  input:checked~.bayan__subtitle:after {
+  .bayan__item:hover .bayan__subtitle svg ,
+  input:checked~.bayan__subtitle svg  {
     transform: rotate(180deg);
-    border-color: #689bd2 transparent transparent transparent;
   }
 }
 
