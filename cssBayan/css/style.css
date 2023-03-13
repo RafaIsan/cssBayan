@@ -60,14 +60,6 @@ input:checked~.bayan__subtitle {
   color: #689bd2;
 }
 
-input:checked~.bayan__subtitle svg {
-  opacity: 1;
-}
-
-input:checked~.bayan__subtitle svg path {
-  fill: #689bd2;
-}
-
 input:checked~img {
   height: auto;
   max-height: 100vh;
